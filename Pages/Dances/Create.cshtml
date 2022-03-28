@@ -1,0 +1,49 @@
+﻿@page
+@model gendarazorpages.Pages.Dances.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Dances</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Dances.Title" class="control-label"></label>
+                <input asp-for="Dances.Title" class="form-control" />
+                <span asp-validation-for="Dances.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dances.ReleaseDate" class="control-label"></label>
+                <input asp-for="Dances.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Dances.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dances.Genre" class="control-label"></label>
+                <input asp-for="Dances.Genre" class="form-control" />
+                <span asp-validation-for="Dances.Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dances.Price" class="control-label"></label>
+                <input asp-for="Dances.Price" class="form-control" />
+                <span asp-validation-for="Dances.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
